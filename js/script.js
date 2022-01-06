@@ -1,26 +1,33 @@
 // Ecma 6
 //////////////////////
+// for of
+weekDays = ["a", "b", "c"];
+var x;
+for (x of weekDays) {
+  console.log(x);
+}
+//////////////////////
 // arrow Function
-let arrowFn = (a, b) => a + b;
-console.log(arrowFn(2, 3));
+// let arrowFn = (a, b) => a + b;
+// console.log(arrowFn(2, 3));
 
-let arrowFn2 = (a, b) => {
-  return a + b;
-};
-console.log(arrowFn2(2, 3));
+// let arrowFn2 = (a, b) => {
+//   return a + b;
+// };
+// console.log(arrowFn2(2, 3));
 
-let aFun = (a) => a + 4;
-console.log(aFun(3));
+// let aFun = (a) => a + 4;
+// console.log(aFun(3));
 
 //  arrow with foreach {arguments}
-let result = 0;
-var sumArgs = (...args) => {
-  args.forEach((ele) => {
-    result += ele;
-  });
-};
-sumArgs(3, 4, 5, 6, 7);
-console.log(result);
+// let result = 0;
+// var sumArgs = (...args) => {
+//   args.forEach((ele) => {
+//     result += ele;
+//   });
+// };
+// sumArgs(3, 4, 5, 6, 7);
+// console.log(result);
 
 //////////////////////
 // Rest Operators
