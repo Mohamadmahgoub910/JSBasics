@@ -1,3 +1,11 @@
+// Ecma 6
+// default function
+function add(a = 0, b = 0) {
+  return a + b;
+}
+console.log(5);
+////////////////////////////////
+// Format
 // var firstName = "Mohamad";
 // var lastName = "Mahgoub";
 // var str1 = format`My first name is ${firstName} and last name is ${lastName} `;
