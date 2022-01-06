@@ -1,3 +1,10 @@
+// var firstName = "Mohamad";
+// var lastName = "Mahgoub";
+// var str1 = format`My first name is ${firstName} and last name is ${lastName} `;
+// function format(s, f, l) {
+//   return `${s[0]} <${f}> ${s[1]} <${l}> `;
+// }
+
 // h1 = document.getElementsByTagName("h1")[0];
 // console.log(h1);
 h11 = document.getElementById("first_h1");
