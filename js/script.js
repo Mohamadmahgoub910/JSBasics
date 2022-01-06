@@ -1,11 +1,37 @@
 // Ecma 6
 //////////////////////
+// ES8 String padding
+let str1 = "hi";
+// console.log(str1.padStart(5, "y"));
+// console.log(str1.padEnd(5, "by"));
+let obj1 = {
+  name: "aliaa",
+  age: 23,
+};
+// console.log(obj1);
+// Get names {all} and get ages {all}
+// console.log(Object.entries(obj1));
+Object.entries(obj1).forEach((ele) => {
+  console.log(ele);
+  ele.forEach((el) => {
+    console.log(el);
+  });
+});
+// Only keys
+console.log("Only Keys");
+console.log(Object.keys(obj1));
+
+// Only values
+console.log("Only values");
+console.log(Object.values(obj1));
+
+//////////////////////
 // for of
-weekDays = ["a", "b", "c"];
-var x;
-for (x of weekDays) {
-  console.log(x);
-}
+// weekDays = ["a", "b", "c"];
+// var x;
+// for (x of weekDays) {
+//   console.log(x);
+// }
 //////////////////////
 // arrow Function
 // let arrowFn = (a, b) => a + b;
