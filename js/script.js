@@ -24,6 +24,20 @@ div1.onclick = () => {
 };
 div1.title = "hello";
 console.log(div1.title);
+// Create another div
+let div2 = document.createElement("div");
+att1 = document.createAttribute("title");
+att1.value = "This is div which we created!";
+div2.setAttributeNode(att1);
+div2.innerHTML = "The Data for newly Created element which is div 2 P";
+div1.append(div2);
+console.log("Done");
+bye = document.getElementById("byeFired");
+bye.addEventListener("click", function () {
+  console.log("Bye!");
+});
+
+//////////////////\\\\\\\\\\\\\\\\\\\
 // Read array of object data
 // let students = [
 //   {
