@@ -1,9 +1,21 @@
 // Ecma 6
-// default function
-function add(a = 0, b = 0) {
-  return a + b;
+
+//////////////////////
+// Rest Operators
+let sum = 0;
+function sumArr(...paras) {
+  paras.forEach((para) => {
+    sum += para;
+  });
 }
-console.log(5);
+sumArr(2, 3, 4, 5, 6);
+console.log(sum);
+////////////////////////
+// default function
+// function add(a = 0, b = 0) {
+//   return a + b;
+// }
+// console.log(5);
 ////////////////////////////////
 // Format
 // var firstName = "Mohamad";
