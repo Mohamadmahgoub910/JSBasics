@@ -1,15 +1,37 @@
 // Ecma 6
+//////////////////////
+// arrow Function
+let arrowFn = (a, b) => a + b;
+console.log(arrowFn(2, 3));
+
+let arrowFn2 = (a, b) => {
+  return a + b;
+};
+console.log(arrowFn2(2, 3));
+
+let aFun = (a) => a + 4;
+console.log(aFun(3));
+
+//  arrow with foreach {arguments}
+let result = 0;
+var sumArgs = (...args) => {
+  args.forEach((ele) => {
+    result += ele;
+  });
+};
+sumArgs(3, 4, 5, 6, 7);
+console.log(result);
 
 //////////////////////
 // Rest Operators
-let sum = 0;
-function sumArr(...paras) {
-  paras.forEach((para) => {
-    sum += para;
-  });
-}
-sumArr(2, 3, 4, 5, 6);
-console.log(sum);
+// let sum = 0;
+// function sumArr(...paras) {
+//   paras.forEach((para) => {
+//     sum += para;
+//   });
+// }
+// sumArr(2, 3, 4, 5, 6);
+// console.log(sum);
 ////////////////////////
 // default function
 // function add(a = 0, b = 0) {
