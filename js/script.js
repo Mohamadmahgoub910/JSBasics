@@ -1,5 +1,19 @@
-// Ecma 6
+// Ecma OOP
+const obj = {
+  name: "Mohamad Mahgoub",
+  hairColor: "yellow",
+  eyeColor: "Hazel",
+  age: 26,
+  intr: function () {
+    return `We have here data ${this.name}, ${this.hairColor}, ${this.eyeColor} and ${this.age}`;
+  },
+};
+console.log(obj.intr());
+// we here used repeated code we can make a class or a template
+// and that is intro to Class
 
+////////////////////////
+// Ecma 6
 //////////////////////
 //  rest properties
 // let { name, age, ...args } = {
@@ -13,15 +27,15 @@
 // console.log(args);
 
 // Ok We can name the object also
-let obj1 = {
-  name: "aliaa",
-  age: 23,
-  id: 1,
-  email: "al@gmail.com",
-};
-let { name, age, ...args } = obj1;
-console.log(name);
-console.log(args);
+// let obj1 = {
+//   name: "aliaa",
+//   age: 23,
+//   id: 1,
+//   email: "al@gmail.com",
+// };
+// let { names, age, ...args } = obj1;
+// console.log(names);
+// console.log(args);
 //////////////////////
 // ES8 String padding
 // let str1 = "hi";
