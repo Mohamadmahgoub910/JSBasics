@@ -6,17 +6,28 @@ function Person(_id, _name, _age, _salary) {
   this.Name = _name;
   this.Age = _age;
   this.Salary = _salary;
-  this.intro = function () {
-    return `id of person is ${this.Id}, has ${this.Name} name and ${this.Age}
-    and has Salary ${this.Salary}`;
-  };
+  // this.intro = function () {
+  //   return `id of person is ${this.Id}, has ${this.Name} name and ${this.Age}
+  //   and has Salary ${this.Salary}`;
+  // };
 }
+Person.prototype.intro = function () {
+  return `id of person is ${this.Id}, has ${this.Name} name and ${this.Age}
+    and has Salary ${this.Salary}`;
+};
+Person.prototype.work = "Freelancer";
+
 const person1 = new Person(1, "Medo", 12, "12222");
 const person2 = new Person(2, "ali", 22, "12222");
 const person3 = new Person(3, "aliaa", 32, "12222");
 console.log(`data of id ${person1.Id} is ` + person1.intro());
 console.log(`data of id ${person2.Id} is ` + person2.intro());
 console.log(`data of id ${person3.Id} is ` + person3.intro());
+console.log(person3.work);
+// Object Create Method
+person1.Name = "Ali";
+console.log(person1.Name);
+console.log(person1.intro());
 // console.table(person1);
 // ////////////////////////////
 // const obj = {
