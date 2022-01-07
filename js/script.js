@@ -1,174 +1,174 @@
 // Ecma OOP
 // /////////////////////////////
 // Class concept and make template
-class PersonClass {
-  constructor(_fname, _age) {
-    this.firstName = _fname;
-    this.Age = _age;
-  }
-  intro() {
-    return `name is  ${this.firstName} and age is ${this.Age} `;
-  }
-}
+// class PersonClass {
+//   constructor(_fname, _age) {
+//     this.firstName = _fname;
+//     this.Age = _age;
+//   }
+//   intro() {
+//     return `name is  ${this.firstName} and age is ${this.Age} `;
+//   }
+// }
 
-const person1 = new PersonClass("medo", 12);
-console.log(person1.intro());
+// const person1 = new PersonClass("medo", 12);
+// console.log(person1.intro());
 
-const person2 = Object.create(person1);
-console.log(person2.intro.call(person2));
-const person3 =
-  // /////////////////////////////
-  // Function Constructors and benefits
-  // function Person(_id, _name, _age, _salary) {
-  //   this.Id = _id;
-  //   this.Name = _name;
-  //   this.Age = _age;
-  //   this.Salary = _salary;
-  //   // this.intro = function () {
-  //   //   return `id of person is ${this.Id}, has ${this.Name} name and ${this.Age}
-  //   //   and has Salary ${this.Salary}`;
-  //   // };
-  // }
-  // Person.prototype.intro = function () {
-  //   return `id of person is ${this.Id}, has ${this.Name} name and ${this.Age}
-  //     and has Salary ${this.Salary}`;
-  // };
-  // Person.prototype.work = "Freelancer";
+// const person2 = Object.create(person1);
+// console.log(person2.intro.call(person2));
 
-  // const person1 = new Person(1, "Medo", 12, "12222");
-  // const person2 = new Person(2, "ali", 22, "12222");
-  // const person3 = new Person(3, "aliaa", 32, "12222");
-  // console.log(`data of id ${person1.Id} is ` + person1.intro());
-  // console.log(`data of id ${person2.Id} is ` + person2.intro());
-  // console.log(`data of id ${person3.Id} is ` + person3.intro());
-  // console.log(person3.work);
-  // // Object Create Method
-  // person1.Name = "Ali";
-  // console.log(person1.Name);
-  // console.log(person1.intro());
-  // console.table(person1);
-  // ////////////////////////////
-  // const obj = {
-  //   name: "Mohamad Mahgoub",
-  //   hairColor: "yellow",
-  //   eyeColor: "Hazel",
-  //   age: 26,
-  //   intr: function () {
-  //     return `We have here data ${this.name}, ${this.hairColor}, ${this.eyeColor} and ${this.age}`;
-  //   },
-  // };
-  // console.log(obj.intr());
-  // we here used repeated code we can make a class or a template
-  // and that is intro to Class
+// /////////////////////////////
+// Function Constructors and benefits
+// function Person(_id, _name, _age, _salary) {
+//   this.Id = _id;
+//   this.Name = _name;
+//   this.Age = _age;
+//   this.Salary = _salary;
+//   // this.intro = function () {
+//   //   return `id of person is ${this.Id}, has ${this.Name} name and ${this.Age}
+//   //   and has Salary ${this.Salary}`;
+//   // };
+// }
+// Person.prototype.intro = function () {
+//   return `id of person is ${this.Id}, has ${this.Name} name and ${this.Age}
+//     and has Salary ${this.Salary}`;
+// };
+// Person.prototype.work = "Freelancer";
 
-  ////////////////////////
-  // Ecma 6
-  //////////////////////
-  //  rest properties
-  // let { name, age, ...args } = {
-  //   name: "aliaa",
-  //   age: 23,
-  //   id: 1,
-  //   email: "al@gmail.com",
-  // };
-  // console.log(name);
-  // console.log(age);
-  // console.log(args);
+// const person1 = new Person(1, "Medo", 12, "12222");
+// const person2 = new Person(2, "ali", 22, "12222");
+// const person3 = new Person(3, "aliaa", 32, "12222");
+// console.log(`data of id ${person1.Id} is ` + person1.intro());
+// console.log(`data of id ${person2.Id} is ` + person2.intro());
+// console.log(`data of id ${person3.Id} is ` + person3.intro());
+// console.log(person3.work);
+// // Object Create Method
+// person1.Name = "Ali";
+// console.log(person1.Name);
+// console.log(person1.intro());
+// console.table(person1);
+// ////////////////////////////
+// const obj = {
+//   name: "Mohamad Mahgoub",
+//   hairColor: "yellow",
+//   eyeColor: "Hazel",
+//   age: 26,
+//   intr: function () {
+//     return `We have here data ${this.name}, ${this.hairColor}, ${this.eyeColor} and ${this.age}`;
+//   },
+// };
+// console.log(obj.intr());
+// we here used repeated code we can make a class or a template
+// and that is intro to Class
 
-  // Ok We can name the object also
-  // let obj1 = {
-  //   name: "aliaa",
-  //   age: 23,
-  //   id: 1,
-  //   email: "al@gmail.com",
-  // };
-  // let { names, age, ...args } = obj1;
-  // console.log(names);
-  // console.log(args);
-  //////////////////////
-  // ES8 String padding
-  // let str1 = "hi";
-  // console.log(str1.padStart(5, "y"));
-  // console.log(str1.padEnd(5, "by"));
-  // let obj1 = {
-  //   name: "aliaa",
-  //   age: 23,
-  // };
-  // console.log(obj1);
-  // Get names {all} and get ages {all}
-  // console.log(Object.entries(obj1));
-  // Object.entries(obj1).forEach((ele) => {
-  //   console.log(ele);
-  //   ele.forEach((el) => {
-  //     console.log(el);
-  //   });
-  // });
-  //  Only keys
-  // console.log("Only Keys");
-  // console.log(Object.keys(obj1));
+////////////////////////
+// Ecma 6
+//////////////////////
+//  rest properties
+// let { name, age, ...args } = {
+//   name: "aliaa",
+//   age: 23,
+//   id: 1,
+//   email: "al@gmail.com",
+// };
+// console.log(name);
+// console.log(age);
+// console.log(args);
 
-  // Only values
-  // console.log("Only values");
-  // console.log(Object.values(obj1));
+// Ok We can name the object also
+// let obj1 = {
+//   name: "aliaa",
+//   age: 23,
+//   id: 1,
+//   email: "al@gmail.com",
+// };
+// let { names, age, ...args } = obj1;
+// console.log(names);
+// console.log(args);
+//////////////////////
+// ES8 String padding
+// let str1 = "hi";
+// console.log(str1.padStart(5, "y"));
+// console.log(str1.padEnd(5, "by"));
+// let obj1 = {
+//   name: "aliaa",
+//   age: 23,
+// };
+// console.log(obj1);
+// Get names {all} and get ages {all}
+// console.log(Object.entries(obj1));
+// Object.entries(obj1).forEach((ele) => {
+//   console.log(ele);
+//   ele.forEach((el) => {
+//     console.log(el);
+//   });
+// });
+//  Only keys
+// console.log("Only Keys");
+// console.log(Object.keys(obj1));
 
-  //////////////////////
-  // for of
-  // weekDays = ["a", "b", "c"];
-  // var x;
-  // for (x of weekDays) {
-  //   console.log(x);
-  // }
-  //////////////////////
-  // arrow Function
-  // let arrowFn = (a, b) => a + b;
-  // console.log(arrowFn(2, 3));
+// Only values
+// console.log("Only values");
+// console.log(Object.values(obj1));
 
-  // let arrowFn2 = (a, b) => {
-  //   return a + b;
-  // };
-  // console.log(arrowFn2(2, 3));
+//////////////////////
+// for of
+// weekDays = ["a", "b", "c"];
+// var x;
+// for (x of weekDays) {
+//   console.log(x);
+// }
+//////////////////////
+// arrow Function
+// let arrowFn = (a, b) => a + b;
+// console.log(arrowFn(2, 3));
 
-  // let aFun = (a) => a + 4;
-  // console.log(aFun(3));
+// let arrowFn2 = (a, b) => {
+//   return a + b;
+// };
+// console.log(arrowFn2(2, 3));
 
-  //  arrow with foreach {arguments}
-  // let result = 0;
-  // var sumArgs = (...args) => {
-  //   args.forEach((ele) => {
-  //     result += ele;
-  //   });
-  // };
-  // sumArgs(3, 4, 5, 6, 7);
-  // console.log(result);
+// let aFun = (a) => a + 4;
+// console.log(aFun(3));
 
-  //////////////////////
-  // Rest Operators
-  // let sum = 0;
-  // function sumArr(...paras) {
-  //   paras.forEach((para) => {
-  //     sum += para;
-  //   });
-  // }
-  // sumArr(2, 3, 4, 5, 6);
-  // console.log(sum);
-  ////////////////////////
-  // default function
-  // function add(a = 0, b = 0) {
-  //   return a + b;
-  // }
-  // console.log(5);
-  ////////////////////////////////
-  // Format
-  // var firstName = "Mohamad";
-  // var lastName = "Mahgoub";
-  // var str1 = format`My first name is ${firstName} and last name is ${lastName} `;
-  // function format(s, f, l) {
-  //   return `${s[0]} <${f}> ${s[1]} <${l}> `;
-  // }
+//  arrow with foreach {arguments}
+// let result = 0;
+// var sumArgs = (...args) => {
+//   args.forEach((ele) => {
+//     result += ele;
+//   });
+// };
+// sumArgs(3, 4, 5, 6, 7);
+// console.log(result);
 
-  // h1 = document.getElementsByTagName("h1")[0];
-  // console.log(h1);
-  (h11 = document.getElementById("first_h1"));
+//////////////////////
+// Rest Operators
+// let sum = 0;
+// function sumArr(...paras) {
+//   paras.forEach((para) => {
+//     sum += para;
+//   });
+// }
+// sumArr(2, 3, 4, 5, 6);
+// console.log(sum);
+////////////////////////
+// default function
+// function add(a = 0, b = 0) {
+//   return a + b;
+// }
+// console.log(5);
+////////////////////////////////
+// Format
+// var firstName = "Mohamad";
+// var lastName = "Mahgoub";
+// var str1 = format`My first name is ${firstName} and last name is ${lastName} `;
+// function format(s, f, l) {
+//   return `${s[0]} <${f}> ${s[1]} <${l}> `;
+// }
+
+// h1 = document.getElementsByTagName("h1")[0];
+// console.log(h1);
+h11 = document.getElementById("first_h1");
 // fire = document.getElementById("fire");
 function fired() {
   h11.style.color = "white";
