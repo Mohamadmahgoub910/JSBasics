@@ -81,6 +81,8 @@ Brex.addEventListener("click", function (event) {
     '<image width="300px" height="100px" src="./images/brex.jpg"></image>';
   brexText.innerHTML =
     "<h3>The value of brex brand is</h3>" + Brex.toFixed(2) + "$";
+  // display all progress bar here beside image based on click brex button
+
   event.preventDefault();
 });
 // //////////////////////////
@@ -126,4 +128,20 @@ amex.addEventListener("click", function (event) {
   // console.log(amex);
   event.preventDefault();
 });
-// Functions
+
+// ////////////////////////////////
+// handle image slider
+// const images = document.querySelectorAll(".image-container img");
+// let i = 0; // current slide
+// let j = 3; // total slides
+// function next() {
+//   document.getElementById("content" + (i + 1)).classList.remove("active");
+//   i = (j + i + 1) % j;
+//   document.getElementById("content" + (i + 1)).classList.add("active");
+// }
+
+// function prev() {
+//   document.getElementById("content" + (i + 1)).classList.remove("active");
+//   i = (j + i - 1) % j;
+//   document.getElementById("content" + (i + 1)).classList.add("active");
+// }

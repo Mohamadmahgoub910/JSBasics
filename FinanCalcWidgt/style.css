@@ -53,3 +53,55 @@
   top: 100px;
   left: 15%;
 }
+
+/* card of images
+.image-container {
+  position: relative;
+}
+
+img {
+  position: relative;
+  width: 460px;
+  height: 280px;
+  display: none;
+}
+
+.active {
+  display: block;
+}
+.dot-container {
+  width: 250px;
+  margin: 20px auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+}
+
+#prev,
+#next {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  background-color: #076bb8;
+  color: #ffffff;
+  margin: auto;
+  top: 150%;
+  bottom: 5;
+  border: none;
+  border-radius: 3px;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+#prev {
+  left: 5px;
+}
+
+#next {
+  right: 5px;
+} */
