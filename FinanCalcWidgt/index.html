@@ -23,6 +23,11 @@
             Crop.Spend <input type="text" required id="calc-input3" placeholder="Enter a number"><br><br>
             Team Project <input type="text" required id="calc-input4" placeholder="Enter a number"><br><br>
 
+
+            <button id="unlimLife-button" class="btn btn-info" type="submit">
+                calculate unlimited and lifetime
+            </button>
+
             <h4>Compare your Rewards </h4>
             <button id="brex-button" class="btn btn-info" type="submit">
                 Brex
@@ -36,13 +41,14 @@
 
         </form>
         <div id="brand"></div>
-        <div id="image"></div>
-        <br>
-        
-        UnLimited Rewards <progress id="file" max="100" value="100"> </progress>
-        <br>
-        LifeTime Rewards  <progress id="file" max="100" value="100"> </progress>
-
+        <div id="image"></div><br>
+        <div class="container">
+            <img id="imgAlongBar" >
+            <div class="progress1">
+            </div><br>
+            <div class="progress2">
+            </div><br>
+        </div>
     </div>
 
     <script src="script.js"></script>
