@@ -31,10 +31,10 @@ unlimLife.addEventListener("click", function (event) {
   // make progress to store unlimited
   let progUnlimit = d.createElement("progress");
   progUnlimit.setAttribute("value", unlimited.toFixed(2));
-  progUnlimit.setAttribute("max", unlimited.toFixed(2));
-
+  progUnlimit.setAttribute("max", 100);
+  // unlimited.toFixed(2)
   // make unlimited inner html value
-  progress.innerHTML = unlimited;
+  progress.innerHTML = ((unlimited * 100) / 100).toFixed(2) + "$";
   // "<h3>The value of unlimited brand is</h3>" + unlimited + "$" + "<br>";
   // append child
   progress.appendChild(progUnlimit);
@@ -42,9 +42,9 @@ unlimLife.addEventListener("click", function (event) {
   // make progress to store LifeTime
   let lifeTimeBar = d.createElement("progress");
   lifeTimeBar.setAttribute("value", lifeTime.toFixed(2));
-  lifeTimeBar.setAttribute("max", lifeTime.toFixed(2));
-  // make LifTime inner html value
-  progress2.innerHTML = lifeTime;
+  lifeTimeBar.setAttribute("max", 100);
+  // make LifTime inner html value lifeTime.toFixed(2)
+  progress2.innerHTML = ((lifeTime * 100) / 100).toFixed(2) + "$";
   // "<h3>The value of lifeTime brand is</h3>" + lifeTime + "$" + "<br>";
   progress2.appendChild(lifeTimeBar);
 
