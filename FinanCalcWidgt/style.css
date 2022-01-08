@@ -1,0 +1,34 @@
+.container1 {
+  position: relative;
+  width: 400px;
+  height: 180px;
+}
+#imgAlongBar {
+  position: relative;
+  width: 180px;
+  height: 100px;
+}
+.progress1 {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  width: 200px;
+  height: 80px;
+}
+.progress2 {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 200px;
+  height: 80px;
+}
+#unlimit {
+  position: absolute;
+  top: 50px;
+  left: 10%;
+}
+#lifeTimeText {
+  position: absolute;
+  top: 100px;
+  left: 15%;
+}

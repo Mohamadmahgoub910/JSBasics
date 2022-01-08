@@ -26,14 +26,16 @@ unlimLife.addEventListener("click", function (event) {
   let lifeTime = Sum * 1.2;
   let progress = d.getElementsByClassName("progress1")[0];
   let progress2 = d.getElementsByClassName("progress2")[0];
+  let imageAndText = d.getElementsByClassName("imageAndText")[0];
+  imageAndText.style.display = "inline-block";
   // make progress to store unlimited
   let progUnlimit = d.createElement("progress");
   progUnlimit.setAttribute("value", unlimited.toFixed(2));
   progUnlimit.setAttribute("max", unlimited.toFixed(2));
 
   // make unlimited inner html value
-  progress.innerHTML =
-    "<h3>The value of unlimited brand is</h3>" + unlimited + "$" + "<br>";
+  progress.innerHTML = unlimited;
+  // "<h3>The value of unlimited brand is</h3>" + unlimited + "$" + "<br>";
   // append child
   progress.appendChild(progUnlimit);
 
@@ -42,15 +44,20 @@ unlimLife.addEventListener("click", function (event) {
   lifeTimeBar.setAttribute("value", lifeTime.toFixed(2));
   lifeTimeBar.setAttribute("max", lifeTime.toFixed(2));
   // make LifTime inner html value
-  progress2.innerHTML =
-    "<h3>The value of lifeTime brand is</h3>" + lifeTime + "$" + "<br>";
+  progress2.innerHTML = lifeTime;
+  // "<h3>The value of lifeTime brand is</h3>" + lifeTime + "$" + "<br>";
   progress2.appendChild(lifeTimeBar);
 
   // Make An Image beside progress bar
   let imageAlongBar = d.getElementById("imgAlongBar");
   imageAlongBar.src = "./images/pay.png";
+  imageAlongBar.style.width = "80px";
+  imageAlongBar.style.opacity = 0.5;
+  imageAlongBar.style.display = "inline";
+  let unlimit = d.getElementById("unlimit");
+  let lifeTimeText = d.getElementById("lifeTimeText");
   let container = d
-    .getElementsByClassName("container")[0]
+    .getElementsByClassName("container1")[0]
     .appendChild(imageAlongBar);
   event.preventDefault();
 });
