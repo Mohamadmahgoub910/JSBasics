@@ -202,24 +202,28 @@ function myFunction(imgs) {
   expandImg.src = imgs.src;
   imgText.innerHTML = imgs.alt;
   expandImg.parentElement.style.display = "block";
-  // let Vendor = d.getElementById("calc-input1").value;
-  // let Media = d.getElementById("calc-input2").value;
-  // let Crop = d.getElementById("calc-input3").value;
-  // let Team = d.getElementById("calc-input4").value;
+  let Vendor = d.getElementById("calc-input1").value;
+  let Media = d.getElementById("calc-input2").value;
+  let Crop = d.getElementById("calc-input3").value;
+  let Team = d.getElementById("calc-input4").value;
 
-  // let brandPrice = d.getElementById("brandPrice");
-  // let unlimitPrice = d.getElementById("unlimitPrice");
-  // let lifePrice = d.getElementById("lifePrice");
-
-  // Sum =
-  //   parseFloat(Vendor) +
-  //   parseFloat(Media) +
-  //   parseFloat(Crop) +
-  //   parseFloat(Team);
-  // let Brex = Sum * 0.3;
-  // let unlimited = Sum * 1.1;
-  // let lifeTime = Sum * 1.2;
-  // brandPrice.innerHTML = "Brex" + Brex + "$";
-  // unlimitPrice.innerHTML = "unlimit" + unlimited + "$";
-  // lifePrice.innerHTML = "lifeTime" + lifeTime + "$";
+  Sum =
+    parseFloat(Vendor) +
+    parseFloat(Media) +
+    parseFloat(Crop) +
+    parseFloat(Team);
+  let unlimited = Sum * 1.1;
+  let progUnlimit = d.createElement("progress");
+  progUnlimit.setAttribute("value", unlimited.toFixed(2));
+  progUnlimit.setAttribute("max", 100);
+  d.getElementById("progress1").appendChild(progUnlimit);
+  let unlimitPriceCard = (d.getElementById("unlimitPriceCard").innerHTML =
+    "unlimit => " + unlimited + "$");
+  let lifeTime = Sum * 1.2;
+  let proglifeTime = d.createElement("progress");
+  proglifeTime.setAttribute("value", lifeTime.toFixed(2));
+  proglifeTime.setAttribute("max", 100);
+  d.getElementById("progress2").appendChild(proglifeTime);
+  let LifePriceCard = (d.getElementById("LifePriceCard").innerHTML =
+    "unlimit => " + lifeTime + "$");
 }
