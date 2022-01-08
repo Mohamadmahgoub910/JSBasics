@@ -11,6 +11,7 @@
     <!-- Font awesome  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="./style.css">
+
     <title>Financial Calc JS</title>
 </head>
 
@@ -57,7 +58,48 @@
         </div>
         <!-- this is bootstrap design for image + progress bar + price  -->
         <hr>
-        <div class="containerbts" style="display: none;">
+        <div style="text-align:center">
+            <h2>Tabbed Image Gallery</h2>
+            <p>Click on the images below:</p>
+        </div>
+
+        <!-- The four columns -->
+        <div class="row">
+            <div class="column">
+                <img src="./images/brex.jpg"  style="width:30%" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="./images/stripe.png"  style="width:30%" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="./images/amex.png"  style="width:30%" onclick="myFunction(this);">
+            </div>
+            
+        </div>
+
+        <div class="containerCard">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+            <img id="expandedImg" style="width:30%">
+            <div id="imgtext"></div>
+
+        </div>
+        <pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </pre>
+        <!-- <div class="containerbts" style="display: none;">
             <div class="row">
                 <div class="col-sm">
                     <img id="imgbtsrp" src="#" alt="">
@@ -83,7 +125,7 @@
                     <p id="lifeTimePrice"></p> <br>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- make a start card image
         <div class="image-container">
             <a href="#"> <img src="./images/brex.jpg" id="content1" class="active"></a>
@@ -95,39 +137,11 @@
 
     </div>
     </div>
-    <pre>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </pre>
 
     <script src="script.js"></script>
+
 </body>
 
 </html>

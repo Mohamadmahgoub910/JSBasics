@@ -196,3 +196,30 @@ amex.addEventListener("click", function (event) {
 //   document.getElementById("content" + (i + 1)).classList.add("active");
 // }
 //////////////////////////////////////////
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+  // let Vendor = d.getElementById("calc-input1").value;
+  // let Media = d.getElementById("calc-input2").value;
+  // let Crop = d.getElementById("calc-input3").value;
+  // let Team = d.getElementById("calc-input4").value;
+
+  // let brandPrice = d.getElementById("brandPrice");
+  // let unlimitPrice = d.getElementById("unlimitPrice");
+  // let lifePrice = d.getElementById("lifePrice");
+
+  // Sum =
+  //   parseFloat(Vendor) +
+  //   parseFloat(Media) +
+  //   parseFloat(Crop) +
+  //   parseFloat(Team);
+  // let Brex = Sum * 0.3;
+  // let unlimited = Sum * 1.1;
+  // let lifeTime = Sum * 1.2;
+  // brandPrice.innerHTML = "Brex" + Brex + "$";
+  // unlimitPrice.innerHTML = "unlimit" + unlimited + "$";
+  // lifePrice.innerHTML = "lifeTime" + lifeTime + "$";
+}
