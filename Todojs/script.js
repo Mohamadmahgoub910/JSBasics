@@ -5,15 +5,13 @@ const todoButton = d.querySelector(".todo-button");
 const todoList = d.querySelector(".todo-list");
 
 // Event Listeners
-todoButton.addEventListener("click", function addTodo(event) {
+todoButton.addEventListener("click", function (event) {
   event.preventDefault();
-  //   console.log("hello");
-  //  create element div
   const todoDiv = d.createElement("div");
   todoDiv.classList.add("todo");
   // create li
   const newTodo = d.createElement("li");
-  newTodo.innerHTML = "hey";
+  newTodo.innerHTML = todoInput.value;
   newTodo.classList.add("todo-item");
   todoDiv.appendChild(newTodo);
   // crete check button
@@ -26,10 +24,19 @@ todoButton.addEventListener("click", function addTodo(event) {
   const trashButton = d.createElement("button");
   trashButton.innerHTML =
     '<i style="color:red ;" class="fa fa-trash" aria-hidden="true"></i>';
-  trashButton.classList.add("complete-btn");
+  trashButton.classList.add("trash-btn");
   todoDiv.appendChild(trashButton);
   //   Append to List
   todoList.appendChild(todoDiv);
+  todoInput.value = "";
+  // Delete task
+  todoList.addEventListener("click", function (event) {
+    const item = event.target;
+    if (item.classList[0] === "trash-btn") {
+      const todo = item.parentElement;
+      todo.remove();
+    }
+  });
 });
 
 // Functions
