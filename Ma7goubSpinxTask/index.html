@@ -48,27 +48,43 @@
          background-attachment: fixed;
          background-size: 100% 100%;
          ">
-            <ul class="pager">
-                <li class="previous"> <a href="#">Previous</a> </li>
-                <li class="next"> <a href="#">Next</a> </li>
-            </ul>
+
             <div class="panel panel-success">
                 <div class="panel-heading">
-                    panel header
+                    <!-- panel header -->
+                    <ul class="pager">
+                        <li class="previous"> <a href="#">Previous</a> </li>
+                        <li class="next"> <a href="#">Next</a> </li>
+                    </ul>
                 </div>
                 <div class="panel-body">
-                    <!-- what is your name ali/aliaa?
-                    <button class="insertAfter" ></button> -->
+                    <!-- # page {left} + img {right} -->
+                    <div class="col-md2">
+
+                        <span>
+                            <span class="pageNum"> tis is page number => { } </span>
+                            <span class="img-panel"> <img src="./images/edu.jpg" width="300" height="100" alt="">
+                            </span>
+                        </span>
+                    </div>
+                    <div class="question" style="text-align: center; margin: auto;">
+                        <!-- {+ question} -->
+                        <span> what is in the image ? <span class="banana">banana</span> :
+                            <span class="orange">orange</span>
+                        </span>
+                    </div>
+
                 </div>
-                
+
             </div>
             <div class="panel-footer">
-                panel footer
+                <!-- panel footer -->
+                <ul class="pagination pagination-sm">
+                    <li> <a href="#">1</a> </li>
+                    <li> <a href="#">2</a> </li>
+                </ul>
             </div>
-            <ul class="pagination pagination-sm">
-                <li> <a href="#">1</a> </li>
-                <li> <a href="#">2</a> </li>
-            </ul>
+
         </div>
     </div>
     </div>

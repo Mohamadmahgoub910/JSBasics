@@ -5,4 +5,5 @@ $(document).ready(function () {
   // $(".panel-body").one("click", function () {
   //   $(".insertAfter").after("wrong choice");
   // });
+  // Pagination
 });
