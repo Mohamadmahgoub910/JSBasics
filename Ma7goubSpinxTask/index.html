@@ -39,9 +39,9 @@
     <!-- Fixed with container -->
     <div class="container">
         <!-- JumpToRun -->
-        <!-- <div style="text-align: center;" class="jumbotron">
-            <h3>hey kid solve this task before sleep</h3>
-        </div> -->
+        <div style="text-align: center;" class="jumbotron">
+            <h4>hey kid solve this task before sleep</h4>
+        </div>
 
         <div class="content" style="background-image: url('images/edu.jpg');
          background-repeat: no-repeat;
@@ -52,10 +52,10 @@
             <div class="panel panel-success">
                 <div class="row panel-body">
                     <!-- # page {left} + img {right} -->
-                    <div  id="page1"class="active" >
+                    <div id="page1" class="active">
                         <span>
-                            <span class="pageNum" style="text-align: center;font-size: xx-large;"> page number <i
-                                    class="fas fa-arrow-right"></i> 1/2 </span>
+                            <span class="pageNum" style="text-align: center;font-size: xx-large; margin: 20px;"> page
+                                number <i class="fas fa-arrow-right"></i> 1/2 </span>
                             <span class="img-panel"> <img class="img-responsive" style="float: right;"
                                     src="./images/apple.png" width="250" height="100" alt="">
                             </span>
@@ -67,7 +67,7 @@
                             <span style="font-size: xx-large;"> what is in the image ?
                                 <span class="apple"><u>apple</u>
                                     <span class="rightApple" style="font-size: 36px; display: none;">&#9989;</span>
-                                     <audio id="wow" style="display: none;" src="./audios/wow.mp3"></audio>
+                                    <audio id="wow" style="display: none;" src="./audios/wow.mp3"></audio>
                                 </span> :
                                 <span class="orange"><u> orange</u>
                                     <span class="falseApple" style="font-size: 36px; display: none;"> &#10060;</span>
@@ -79,8 +79,8 @@
                     <!-- Second Question  -->
                     <div class="Q2 col-6" id="page2" style="display: none;">
                         <span>
-                            <span class="pageNum" style="text-align: center;font-size: xx-large;"> page number <i
-                                    class="fas fa-arrow-right"></i> 2/2 </span>
+                            <span class="pageNum" style="text-align: center;font-size: xx-large; margin: 20px;"> page
+                                number <i class="fas fa-arrow-right"></i> 2/2 </span>
                             <span class="img-panel"> <img class="img-responsive" style="float: right;"
                                     src="./images/orange.png" width="200" height="100" alt="">
                             </span>
@@ -89,14 +89,14 @@
                         <div class="col-6 question" style="text-align: center; margin: auto;">
                             <!-- {+ question} -->
                             <span style="font-size: xx-large;"> what is in the image ?
-                                <span class="orange2"><u> orange</u>
+                                <span class="orange2"><u>orange</u>
                                     <span class="rightOrange" style="font-size: 36px; display: none;"> &#9989; </span>
                                     <audio id="wow" style="display: none;" src="./audios/wow.mp3"></audio>
-                                </span>
+                                </span>:
                                 <span class="apple2"><u>apple</u>
                                     <span class="falseOrange" style="font-size: 36px; display: none;">&#10060;</span>
                                     <audio id="fail" style="display: none;" src="./audios/fail.mp3"></audio>
-                                </span> :
+                                </span>
                             </span>
                         </div>
                     </div>
@@ -106,28 +106,23 @@
             <div class="panel-footer">
                 <!-- panel footer -->
                 <div class="foot" style="text-align: center;">
-                    <span > <i style="font-size: 30px; color: green;" class="fas fa-sync reload"></i>
+                    <span> <i style="font-size: 30px; color: green;" class="fas fa-sync reload"></i>
                     </span> &nbsp;&nbsp;
-                    <span class="load1" > <i style="font-size: 30px; color: chocolate;" class="fas fa-redo-alt "></i> 
+                    <span class="load1"> <i style="font-size: 30px; color: chocolate;" class="fas fa-redo-alt "></i>
                     </span> &nbsp;&nbsp;
-                    <span ><i style="font-size: 30px; color: mediumturquoise;"
-                            class="far fa-eye see"></i></span>&nbsp;&nbsp;
+                    <span class="see"><i style="font-size: 30px; color: mediumturquoise;"
+                            class="far fa-eye"></i></span>&nbsp;&nbsp;
                     <span class="previous"> <i style="font-size: 30px; color: greenyellow;"
                             class="fas fa-arrow-left"></i>
                     </span>&nbsp;&nbsp;
-                    <span  class="pageNo"> <strong>1/2</strong> </span>&nbsp;&nbsp;
-                    <span   class="next"> <i style="font-size: 30px; color: greenyellow;" class="fas fa-arrow-right"></i>
+                    <span class="pageNo"> <strong>1/2</strong> </span>&nbsp;&nbsp;
+                    <span class="next"> <i style="font-size: 30px; color: greenyellow;" class="fas fa-arrow-right"></i>
                     </span>
 
                     <span class="clearfix"></span>&nbsp;&nbsp;
                 </div>
-                <ul class="pagination pagination-sm">
-                    <li> <a class=" p1 active">1
-                            <goto target="Q1" cond=" col-6 question" />
-                        </a> </li>
-                    <li> <a class="p2">2
-                            <goto target="Q2" cond="col-6 question" />
-                        </a> </li>
+                <goto target="Q1" cond=" col-6 question" />
+                <goto target="Q2" cond="col-6 question" />
                 </ul>
             </div>
 

@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $("h3").css("color", "green");
+  $("h4").css("color", "green");
   // next
   // Event
   $(".next").click(function () {
@@ -38,6 +38,15 @@ $(document).ready(function () {
     alert("Not Yet");
   });
   // see correct answer in each div
+  $(".see").click(function () {
+    if ($("#page1").hasClass("active")) {
+      $(".falseApple").addClass("disabled");
+      $(".rightApple").css({ display: "inline" });
+    } else {
+      $(".falseOrange").addClass("disabled");
+      $(".rightOrange").css({ display: "inline" });
+    }
+  });
   // Apple Answer true
   $(".apple").click(function () {
     $(".rightApple").show();
