@@ -1,3 +1,22 @@
 Pagination into div
 https://stackoverflow.com/questions/44257853/create-pagination-on-div-using-jquery
 
+Reload Icon 
+https://stackoverflow.com/questions/5404839/how-can-i-refresh-a-page-with-jquery
+
+control grid more after next and prev prevent move  
+https://www.w3schools.com/bootstrap/bootstrap_grid_examples.asp
+xs={1} md={2} lg={3}
+/////////////////
+/*
+  var divClone = $("#some_div").clone(); // Do this on $(document).ready(function() { ... })
+
+$("#some_div").html("Yeah all good mate!"); // Change the content temporarily
+
+// Use this command if you want to keep divClone as a copy of "#some_div"
+$("#some_div").replaceWith(divClone.clone()); // Restore element with a copy of divClone
+
+// Any changes to "#some_div" after this point will affect the value of divClone
+$("#some_div").replaceWith(divClone); // Restore element with divClone itself
+  **/
+  /////////////////////

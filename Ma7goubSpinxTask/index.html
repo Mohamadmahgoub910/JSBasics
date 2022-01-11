@@ -28,68 +28,75 @@
 
     <title>SpinxTask</title>
 </head>
-<style>
-    .carousel-inner>.item>img {
-        width: 80%;
-        margin: auto;
-    }
-</style>
 
 <body>
     <!-- https://getbootstrap.com/docs/3.3/getting-started/ -->
+    <!-- Preloader -->
+    <div class="loader">
+        <img class="img-responsive" style="margin: auto;" src="./images/load-gif.gif" alt="">
+    </div>
 
     <!-- Fixed with container -->
     <div class="container">
         <!-- JumpToRun -->
-        <div style="text-align: center;" class="jumbotron">
+        <!-- <div style="text-align: center;" class="jumbotron">
             <h3>hey kid solve this task before sleep</h3>
-        </div>
+        </div> -->
 
         <div class="content" style="background-image: url('images/edu.jpg');
          background-repeat: no-repeat;
          background-attachment: fixed;
-         background-size: 100% 100%;
+         background-size: cover;
          ">
 
             <div class="panel panel-success">
-                <div class="panel-heading">
-                    <!-- panel header -->
-                    <ul class="pager">
-                        <li class="previous"> <a href="#"><i style="font-size: 30px;" class="fas fa-arrow-left"></i></a> </li>
-                        <li class="next"> <a href="#"><i style="font-size: 30px;" class="fas fa-arrow-right"></i></a> </li>
-                    </ul>
-                </div>
                 <div class="row panel-body">
                     <!-- # page {left} + img {right} -->
-                    <div class=" Q1 col-6">
+                    <div  id="page1"class="active" >
                         <span>
-                            <span class="pageNum" style="text-align: center;font-size: xx-large;"> page number <i class="fas fa-arrow-right"></i> 1/2 </span>
+                            <span class="pageNum" style="text-align: center;font-size: xx-large;"> page number <i
+                                    class="fas fa-arrow-right"></i> 1/2 </span>
                             <span class="img-panel"> <img class="img-responsive" style="float: right;"
-                                    src="./images/apple.png" width="300" height="100" alt="">
+                                    src="./images/apple.png" width="250" height="100" alt="">
                             </span>
                             <span class="clearfix"></span>
                         </span>
                         <div class="col-6 question" style="text-align: center; margin: auto;">
                             <!-- {+ question}&#10003; &#9989; <span style="font-size: 36px;">&#9989;</span>-->
                             <!-- falsy <span style="font-size: 36px;"> &#10060; </span>-->
-                            <span style="font-size: xx-large;" > what is in the image ? <span class="apple"><u>apple</u></span> :
-                                <span class="orange"><u> orange</u></span>
+                            <span style="font-size: xx-large;"> what is in the image ?
+                                <span class="apple"><u>apple</u>
+                                    <span class="rightApple" style="font-size: 36px; display: none;">&#9989;</span>
+                                     <audio id="wow" style="display: none;" src="./audios/wow.mp3"></audio>
+                                </span> :
+                                <span class="orange"><u> orange</u>
+                                    <span class="falseApple" style="font-size: 36px; display: none;"> &#10060;</span>
+                                    <audio id="fail" style="display: none;" src="./audios/fail.mp3"></audio>
+                                </span>
                             </span>
                         </div>
                     </div> <br>
                     <!-- Second Question  -->
-                    <div class="Q2 col-6" style="display: none;">
+                    <div class="Q2 col-6" id="page2" style="display: none;">
                         <span>
-                            <span class="pageNum" style="text-align: center;font-size: xx-large;"> page number <i class="fas fa-arrow-right"></i> 2/2 </span>
+                            <span class="pageNum" style="text-align: center;font-size: xx-large;"> page number <i
+                                    class="fas fa-arrow-right"></i> 2/2 </span>
                             <span class="img-panel"> <img class="img-responsive" style="float: right;"
-                                    src="./images/orange.jfif" width="300" height="100" alt="">
+                                    src="./images/orange.png" width="200" height="100" alt="">
                             </span>
                             <span class="clearfix"></span>
                         </span>
                         <div class="col-6 question" style="text-align: center; margin: auto;">
                             <!-- {+ question} -->
-                            <span> what is in the image ? <span class="apple"><u>apple</u></span> :
-                                <span class="orange"> <u> orange</u></span>
+                            <span style="font-size: xx-large;"> what is in the image ?
+                                <span class="orange2"><u> orange</u>
+                                    <span class="rightOrange" style="font-size: 36px; display: none;"> &#9989; </span>
+                                    <audio id="wow" style="display: none;" src="./audios/wow.mp3"></audio>
+                                </span>
+                                <span class="apple2"><u>apple</u>
+                                    <span class="falseOrange" style="font-size: 36px; display: none;">&#10060;</span>
+                                    <audio id="fail" style="display: none;" src="./audios/fail.mp3"></audio>
+                                </span> :
                             </span>
                         </div>
                     </div>
@@ -99,13 +106,28 @@
             <div class="panel-footer">
                 <!-- panel footer -->
                 <div class="foot" style="text-align: center;">
-                    <span class="col-6">  <i style="font-size: 30px; color: green;" class="fas fa-sync reload"></i>  </span>
-                    <span class="col-6"><i style="font-size: 30px; color: mediumturquoise;" class="far fa-eye see"></i></span>
-                    <span class="clearfix"></span>
+                    <span > <i style="font-size: 30px; color: green;" class="fas fa-sync reload"></i>
+                    </span> &nbsp;&nbsp;
+                    <span class="load1" > <i style="font-size: 30px; color: chocolate;" class="fas fa-redo-alt "></i> 
+                    </span> &nbsp;&nbsp;
+                    <span ><i style="font-size: 30px; color: mediumturquoise;"
+                            class="far fa-eye see"></i></span>&nbsp;&nbsp;
+                    <span class="previous"> <i style="font-size: 30px; color: greenyellow;"
+                            class="fas fa-arrow-left"></i>
+                    </span>&nbsp;&nbsp;
+                    <span  class="pageNo"> <strong>1/2</strong> </span>&nbsp;&nbsp;
+                    <span   class="next"> <i style="font-size: 30px; color: greenyellow;" class="fas fa-arrow-right"></i>
+                    </span>
+
+                    <span class="clearfix"></span>&nbsp;&nbsp;
                 </div>
                 <ul class="pagination pagination-sm">
-                    <li> <a class=" p1 active" href="#">1 <goto target="Q1" cond="" /> </a> </li>
-                    <li> <a class="p2" href="#">2 <goto target="Q2" cond="" /> </a> </li>
+                    <li> <a class=" p1 active">1
+                            <goto target="Q1" cond=" col-6 question" />
+                        </a> </li>
+                    <li> <a class="p2">2
+                            <goto target="Q2" cond="col-6 question" />
+                        </a> </li>
                 </ul>
             </div>
 
