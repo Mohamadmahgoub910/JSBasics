@@ -1,0 +1,11 @@
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.apple,
+.orange,
+.see,
+.reload {
+  cursor: pointer;
+}

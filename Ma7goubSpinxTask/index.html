@@ -21,10 +21,12 @@
         crossorigin="anonymous"></script>
     <!-- Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js"></script>
+    <!-- Font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- css -->
     <link rel="stylesheet" href="./css/style.css">
 
-    <title>Document</title>
+    <title>SpinxTask</title>
 </head>
 <style>
     .carousel-inner>.item>img {
@@ -53,35 +55,57 @@
                 <div class="panel-heading">
                     <!-- panel header -->
                     <ul class="pager">
-                        <li class="previous"> <a href="#">Previous</a> </li>
-                        <li class="next"> <a href="#">Next</a> </li>
+                        <li class="previous"> <a href="#"><i style="font-size: 30px;" class="fas fa-arrow-left"></i></a> </li>
+                        <li class="next"> <a href="#"><i style="font-size: 30px;" class="fas fa-arrow-right"></i></a> </li>
                     </ul>
                 </div>
-                <div class="panel-body">
+                <div class="row panel-body">
                     <!-- # page {left} + img {right} -->
-                    <div class="col-md2">
-
+                    <div class=" Q1 col-6">
                         <span>
-                            <span class="pageNum"> tis is page number => { } </span>
-                            <span class="img-panel"> <img src="./images/edu.jpg" width="300" height="100" alt="">
+                            <span class="pageNum" style="text-align: center;font-size: xx-large;"> page number <i class="fas fa-arrow-right"></i> 1/2 </span>
+                            <span class="img-panel"> <img class="img-responsive" style="float: right;"
+                                    src="./images/apple.png" width="300" height="100" alt="">
                             </span>
+                            <span class="clearfix"></span>
                         </span>
-                    </div>
-                    <div class="question" style="text-align: center; margin: auto;">
-                        <!-- {+ question} -->
-                        <span> what is in the image ? <span class="banana">banana</span> :
-                            <span class="orange">orange</span>
+                        <div class="col-6 question" style="text-align: center; margin: auto;">
+                            <!-- {+ question}&#10003; &#9989; <span style="font-size: 36px;">&#9989;</span>-->
+                            <!-- falsy <span style="font-size: 36px;"> &#10060; </span>-->
+                            <span style="font-size: xx-large;" > what is in the image ? <span class="apple"><u>apple</u></span> :
+                                <span class="orange"><u> orange</u></span>
+                            </span>
+                        </div>
+                    </div> <br>
+                    <!-- Second Question  -->
+                    <div class="Q2 col-6" style="display: none;">
+                        <span>
+                            <span class="pageNum" style="text-align: center;"> tis is page number => { } </span>
+                            <span class="img-panel"> <img class="img-responsive" style="float: right;"
+                                    src="./images/orange.jfif" width="300" height="100" alt="">
+                            </span>
+                            <span class="clearfix"></span>
                         </span>
+                        <div class="col-6 question" style="text-align: center; margin: auto;">
+                            <!-- {+ question} -->
+                            <span> what is in the image ? <span class="apple"><u>apple</u></span> :
+                                <span class="orange"> <u> orange</u></span>
+                            </span>
+                        </div>
                     </div>
-
                 </div>
 
             </div>
             <div class="panel-footer">
                 <!-- panel footer -->
+                <div class="foot" style="text-align: center;">
+                    <span class="col-6">  <i style="font-size: 30px; color: green;" class="fas fa-sync reload"></i>  </span>
+                    <span class="col-6"><i style="font-size: 30px; color: mediumturquoise;" class="far fa-eye see"></i></span>
+                    <span class="clearfix"></span>
+                </div>
                 <ul class="pagination pagination-sm">
-                    <li> <a href="#">1</a> </li>
-                    <li> <a href="#">2</a> </li>
+                    <li> <a class="active" href="#">1 <goto target="Q1" cond="" /> </a> </li>
+                    <li> <a href="#">2 <goto target="Q2" cond="" /> </a> </li>
                 </ul>
             </div>
 
