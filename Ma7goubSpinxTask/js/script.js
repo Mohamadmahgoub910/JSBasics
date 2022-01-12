@@ -33,9 +33,14 @@ $(document).ready(function () {
     location.reload();
   });
   // //////////////////////////////
-
   $(".load1").click(function () {
-    alert("Not Yet");
+    if ($("#page1").hasClass("active")) {
+      $(".falseApple").removeClass("disabled");
+      $(".rightApple").css({ display: "inline" });
+    } else {
+      $(".falseOrange").removeClass("disabled");
+      $(".rightOrange").css({ display: "inline" });
+    }
   });
   // see correct answer in each div
   $(".see").click(function () {
@@ -48,7 +53,7 @@ $(document).ready(function () {
     }
   });
   // Apple Answer true
-  $(".apple").click(function () {
+  $(".apple").one("click", function () {
     $(".rightApple").show();
     $(".rightApple").addClass("disabled");
     $(".falseApple").addClass("disabled");
@@ -56,7 +61,7 @@ $(document).ready(function () {
     $(".orange").fadeOut();
   });
   //  Apple Answer False
-  $(".orange").click(function () {
+  $(".orange").one("click", function () {
     $(".falseApple").show();
     $(".falseApple").addClass("disabled");
     $(".rightApple").addClass("disabled");
@@ -65,7 +70,7 @@ $(document).ready(function () {
   });
   // /////////////////////////////
   //  orange Answer true
-  $(".apple2").click(function () {
+  $(".apple2").one("click", function () {
     $(".falseOrange").show();
     $(".falseOrange").addClass("disabled");
     $(".rightOrange").addClass("disabled");
@@ -73,7 +78,7 @@ $(document).ready(function () {
     $(".orange2").fadeOut();
   });
   // Orange answer false
-  $(".orange2").click(function () {
+  $(".orange2").one("click", function () {
     $(".rightOrange").show();
     $(".rightOrange").addClass("disabled");
     $(".falseOrange").addClass("disabled");
