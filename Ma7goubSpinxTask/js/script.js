@@ -34,7 +34,7 @@ $(document).ready(function () {
   });
   // //////////////////////////////
   $(".load1").click(function () {
-    console.log("Not yet Not yet !!");
+    alert("It is Not Completed!!");
   });
   // see correct answer in each div
   $(".see").click(function () {
