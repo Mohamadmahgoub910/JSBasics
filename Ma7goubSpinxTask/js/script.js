@@ -34,13 +34,7 @@ $(document).ready(function () {
   });
   // //////////////////////////////
   $(".load1").click(function () {
-    if ($("#page1").hasClass("active")) {
-      $(".falseApple").removeClass("disabled");
-      $(".rightApple").css({ display: "inline" });
-    } else {
-      $(".falseOrange").removeClass("disabled");
-      $(".rightOrange").css({ display: "inline" });
-    }
+    console.log("Not yet Not yet !!");
   });
   // see correct answer in each div
   $(".see").click(function () {
