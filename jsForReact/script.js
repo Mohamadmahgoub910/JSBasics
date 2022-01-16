@@ -82,3 +82,15 @@
 // }
 
 // let P  = Person()
+// ///////////////////////////////
+// spread operator
+// as a reference
+// as a concat
+// const arr1 = [2, 3, 4, 5, 6];
+// const arr2 = [...arr1, "ali"];
+// const arr3 = ["aliaa", ...arr1, ...arr2, "ali"];
+// console.log(arr1);
+// console.log(arr2);
+// console.log(arr3);
+const arNum = [2, 3, 9, 3];
+console.log(`max number with spread is  ${Math.max(...arNum)} `);
