@@ -122,20 +122,60 @@
 // console.log(DBId, params);
 // //////////////////////////////////////
 // Destruct array of object
-const arrObj = [
-  { id: 1, age: 20, Name: "ali" },
-  { id: 2, age: 30, Name: "aliaa" },
-  { id: 3, age: 40, Name: "ola" },
-];
+// const arrObj = [
+//   { id: 1, age: 20, Name: "ali" },
+//   { id: 2, age: 30, Name: "aliaa" },
+//   { id: 3, age: 40, Name: "ola" },
+// ];
 // destruct array
-const [it1, it2, it3] = arrObj;
-console.log(it1);
+// const [it1, it2, it3] = arrObj;
+// console.log(it1);
 
 // destruct object value inside array
-const [
-  { id, age, Name },
-  { id: id1, age: age1, Name: name1 },
-  { id: id3, age: age3, Name: name3 },
-] = arrObj;
+// const [
+//   { id, age, Name },
+//   { id: id1, age: age1, Name: name1 },
+//   { id: id3, age: age3, Name: name3 },
+// ] = arrObj;
 
-console.log(id1, age1, name1);
+// console.log(id1, age1, name1);
+// /////////////////////////////
+//  Destruct object of array
+const userData = {
+  persons: [
+    { id: 1, age: 10, Name: "ali" },
+    { id: 2, age: 20, Name: "aliaa" },
+    { id: 3, age: 30, Name: "ola", more: ["ali", "female"] },
+  ],
+  status2: "active",
+};
+
+// holds object
+// const { persons, status2 } = userData;
+// console.log(status2);
+// console.log(persons);
+
+// holds object inside array [ persons]
+// const {
+//   persons: [i1, i2, i3],
+// } = userData;
+// console.log(i1);
+// print out specific value inside object
+// const {
+//   persons: [{ id, Name }, i2, i3],
+// } = userData;
+// console.log(id, Name);
+// Deep drilling to get a specific value
+const {
+  persons: [
+    ,
+    ,
+    {
+      id,
+      age,
+      Name,
+      more: [name, gender],
+    },
+  ],
+} = userData;
+console.log(gender);
