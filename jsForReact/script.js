@@ -46,9 +46,39 @@
 // Reference is { mutable  Array, Fn, Object, date}
 // pass by value and pass by reference  { deep copy and shallow copy or bitwise value}
 // reference ===> copy a deep copy and can edit in it along side with new values
-const name1 = ["a", "b", "c"];
-const name2 = Object.assign([], name1);
-name1.push("d");
-name2.push("e");
-console.log(name1);
-console.log(name2);
+// const name1 = ["a", "b", "c"];
+// const name2 = Object.assign([], name1);
+// name1.push("d");
+// name2.push("e");
+// console.log(name1);
+// console.log(name2);
+////////////////////////////////////////////////////////
+// arrow function { solve this and syntax sugar}
+// function sayHello(name) {
+//   console.log("Hello " + name);
+// }
+
+// console.log(sayHello("Mohammad"));
+
+// const sayHi = (Name) => (Name === "ali" ? `Hi ${Name}` : "sorry!");
+// let x = sayHi("medo");
+// console.log(x);
+// const returnToTotal = (a, b) => a + b;
+// let sum = returnToTotal(3, 4);
+// console.log(sum);
+// handle thatClass = this to point to current class
+// function Person(){
+//     this.age=0;
+//     // solve this problem
+//     // var thatClass = this;
+//     // setInterval(function grow(){
+//     //     var newAge= this.age++
+//     //     console.log(newAge)
+//     // },1000)
+//     // handle use arrow
+//     grow=()=>{
+//         // handle your login it will done!
+//     }
+// }
+
+// let P  = Person()
