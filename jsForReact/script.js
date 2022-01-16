@@ -92,5 +92,11 @@
 // console.log(arr1);
 // console.log(arr2);
 // console.log(arr3);
-const arNum = [2, 3, 9, 3];
-console.log(`max number with spread is  ${Math.max(...arNum)} `);
+// const arNum = [2, 3, 9, 3];
+// console.log(`max number with spread is  ${Math.max(...arNum)} `);
+// //////////////////////////////
+//  Rest Operators
+// const sayHello = (fname, lname, ...params) => {
+//   console.log(`${fname} + ${lname} + ${params}`);
+// };
+// sayHello("l", "k", "p", "a", "r", "m");
