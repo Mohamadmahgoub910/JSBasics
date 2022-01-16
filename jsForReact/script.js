@@ -40,3 +40,15 @@
 //4-  let, const reject hoisting
 //5-  let , const support fn scope and block scope
 //5- let, const reject global window
+// /////////////////////////////////////////////////////
+// Primitive dt and Reference dt
+// Primitive is { immutable undefined, String, Number, BigInt, Symbol, Boolean }
+// Reference is { mutable  Array, Fn, Object, date}
+// pass by value and pass by reference  { deep copy and shallow copy or bitwise value}
+// reference ===> copy a deep copy and can edit in it along side with new values
+const name1 = ["a", "b", "c"];
+const name2 = Object.assign([], name1);
+name1.push("d");
+name2.push("e");
+console.log(name1);
+console.log(name2);
