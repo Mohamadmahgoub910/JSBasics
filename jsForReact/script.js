@@ -107,6 +107,35 @@
 // console.log(a,c);
 // ////////////////////////////
 // Default value if  we wait 4 vlaues but we got 3
-const names = [1, 2, 3];
-const [a1, ...params] = names;
-console.log(a1, params);
+// const names = [1, 2, 3];
+// const [a1, ...params] = names;
+// console.log(a1, params);
+// Swapping using Destruct
+// let a = 9;
+// let b = 8;
+// [a, b] = [b, a];
+// console.log(a, b);
+// /////////////////////////////////
+// Destruct in object
+// const DBNames = { id: 1, age: 20, Name: "ali" };
+// const { id: DBId, ...params } = DBNames;
+// console.log(DBId, params);
+// //////////////////////////////////////
+// Destruct array of object
+const arrObj = [
+  { id: 1, age: 20, Name: "ali" },
+  { id: 2, age: 30, Name: "aliaa" },
+  { id: 3, age: 40, Name: "ola" },
+];
+// destruct array
+const [it1, it2, it3] = arrObj;
+console.log(it1);
+
+// destruct object value inside array
+const [
+  { id, age, Name },
+  { id: id1, age: age1, Name: name1 },
+  { id: id3, age: age3, Name: name3 },
+] = arrObj;
+
+console.log(id1, age1, name1);
