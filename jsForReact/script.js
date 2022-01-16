@@ -102,6 +102,11 @@
 // sayHello("l", "k", "p", "a", "r", "m");
 // ////////////////////////////////////////
 // Destructure arr
-const names = ["ali", "soha", "aliaa"];
-const [a,,c] = names;
-console.log(a,c);
+// const names = ["ali", "soha", "aliaa"];
+// const [a,,c] = names;
+// console.log(a,c);
+// ////////////////////////////
+// Default value if  we wait 4 vlaues but we got 3
+const names = [1, 2, 3];
+const [a1, ...params] = names;
+console.log(a1, params);
