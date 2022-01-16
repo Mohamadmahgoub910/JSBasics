@@ -100,3 +100,8 @@
 //   console.log(`${fname} + ${lname} + ${params}`);
 // };
 // sayHello("l", "k", "p", "a", "r", "m");
+// ////////////////////////////////////////
+// Destructure arr
+const names = ["ali", "soha", "aliaa"];
+const [a,,c] = names;
+console.log(a,c);
