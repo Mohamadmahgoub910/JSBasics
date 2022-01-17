@@ -166,16 +166,22 @@ const userData = {
 // } = userData;
 // console.log(id, Name);
 // Deep drilling to get a specific value
-const {
-  persons: [
-    ,
-    ,
-    {
-      id,
-      age,
-      Name,
-      more: [name, gender],
-    },
-  ],
-} = userData;
-console.log(gender);
+// const {
+//   persons: [
+//     ,
+//     ,
+//     {
+//       id,
+//       age,
+//       Name,
+//       more: [name, gender],
+//     },
+//   ],
+// } = userData;
+// console.log(gender);
+// ////////////////////////////
+// Destructure parameters
+function getData({ persons: [it1, , it3] }) {
+  console.log(it1);
+}
+getData(userData);
