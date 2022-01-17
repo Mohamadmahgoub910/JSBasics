@@ -276,6 +276,19 @@ const userData = {
 
 ////////////////////////////////////
 // so with filter you can make search or delete
-const names = ["ali", "saed", "soha", "noha"];
-const newNames = names.filter((el) => el.includes("h"));
-console.log(newNames);
+// const names = ["ali", "saed", "soha", "noha"];
+// const newNames = names.filter((el) => el.includes("h"));
+// console.log(newNames);
+
+// ////////////////////////////////
+// Find
+const numbers = [2, 4, , 4, 5, 76, 5];
+const newNum = numbers.find((el) => el > 2);
+console.log(newNum);
+const data = [
+  { id: 1, name: "ali" },
+  { id: 2, name: "ola" },
+];
+// const idFind = 1;
+const desiredData = data.find(({ id, name }) => id === 1);
+console.log(desiredData);
