@@ -218,11 +218,58 @@ const userData = {
 
 // /////////////////////////////
 // map with object key and value
-const dataObj = {
-  1: { fname: "medo", lname: "ali" },
-  2: { fname: "sedo", lname: "ali" },
-  3: { fname: "fedo", lname: "ali" },
+// const dataObj = {
+//   1: { fname: "medo", lname: "ali" },
+//   2: { fname: "sedo", lname: "ali" },
+//   3: { fname: "fedo", lname: "ali" },
+// };
+// // map
+// const newdatObj = Object.values(dataObj).map(({ fname }) => fname);
+// console.log(newdatObj);
+// ////////////////////////////////
+// Filter array
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+// const newArr = arr.filter((el) => el !== 4);
+// console.log(newArr);
+// //////////////////////////////////
+// filter an object
+// const obj = [
+//   { Name: "fares", id: 1 },
+//   { Name: "maha", id: 2 },
+//   { Name: "soha", id: 3 },
+// ];
+// const newObj = obj.filter(({ Name, id }) => id > 1);
+// console.log(newObj);
+// Make my sort
+const makeMySort = (a, b) => {
+  const aAge = a.age;
+  const bAge = b.age;
+  // desc
+  if (bAge < aAge) return bAge - aAge;
 };
-// map
-const newdatObj = Object.values(dataObj).map(({ fname }) => fname);
-console.log(newdatObj);
+const names = [
+  { name: "ali", age: 30 },
+  { name: "soha", age: 34 },
+  { name: "aliaa", age: 31 },
+  { name: "soad", age: 40 },
+  { name: "aya", age: 29 },
+  { name: "medo", age: 21 },
+  { name: "fedo", age: 26 },
+  { name: "dedo", age: 24 },
+  { name: "bedo", age: 22 },
+  { name: "bebo", age: 19 },
+];
+// sort
+newNames = names
+  .sort(makeMySort)
+  .slice(0, 5)
+  .filter(({ age }) => age > 20)
+  .map(({ name: newName, age: newAge }) =>
+    newName === "ali" && newAge === 30
+      ? "ola" + ":" + 13
+      : newName + ":" + newAge
+  );
+console.log(newNames);
+// slice
+// filter
+//map
