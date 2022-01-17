@@ -181,7 +181,48 @@ const userData = {
 // console.log(gender);
 // ////////////////////////////
 // Destructure parameters
-function getData({ persons: [it1, , it3] }) {
-  console.log(it1);
-}
-getData(userData);
+// function getData({ persons: [it1, , it3] }) {
+//   console.log(it1);
+// }
+// getData(userData);
+/////////////////////////////////
+// foreach
+// const names = ["a", "b", "c"];
+// //  syntax sugar
+// names.forEach((el) => console.log(el));
+// names.forEach((el, idx) => {
+//   console.log(el, idx);
+// });
+// ////////////////////
+// const users = {
+//   1: { fname: "ali", email: "ali@gmail.com" },
+//   2: { fname: "aliaa", email: "aliaa@gmail.com" },
+// };
+// Object.keys(users).forEach((el) => {
+//   console.log(`${el} : ${users[el].email} `);
+// });
+
+// Object.values(users).forEach((el) => {
+//   console.log(el);
+// });
+// ///////////////////////////////////////////
+// Map function with array
+// numbers = [1, 2, 3, 4];
+// newNumber = numbers.map((el) => (el % 2 !== 0 ? el : el * 2));
+// console.log(newNumber);
+// ////////////////////////
+// Map function with object
+// const objNames = [{ age: 12 }, { age: 29 }];
+// newObj = objNames.map(({ age }) => age);
+// console.log(newObj);
+
+// /////////////////////////////
+// map with object key and value
+const dataObj = {
+  1: { fname: "medo", lname: "ali" },
+  2: { fname: "sedo", lname: "ali" },
+  3: { fname: "fedo", lname: "ali" },
+};
+// map
+const newdatObj = Object.values(dataObj).map(({ fname }) => fname);
+console.log(newdatObj);
