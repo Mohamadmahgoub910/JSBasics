@@ -275,6 +275,7 @@ const userData = {
 //map
 
 ////////////////////////////////////
+// so with filter you can make search or delete
 const names = ["ali", "saed", "soha", "noha"];
 const newNames = names.filter((el) => el.includes("h"));
 console.log(newNames);
