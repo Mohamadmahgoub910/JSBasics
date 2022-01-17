@@ -241,35 +241,40 @@ const userData = {
 // const newObj = obj.filter(({ Name, id }) => id > 1);
 // console.log(newObj);
 // Make my sort
-const makeMySort = (a, b) => {
-  const aAge = a.age;
-  const bAge = b.age;
-  // desc
-  if (bAge < aAge) return bAge - aAge;
-};
-const names = [
-  { name: "ali", age: 30 },
-  { name: "soha", age: 34 },
-  { name: "aliaa", age: 31 },
-  { name: "soad", age: 40 },
-  { name: "aya", age: 29 },
-  { name: "medo", age: 21 },
-  { name: "fedo", age: 26 },
-  { name: "dedo", age: 24 },
-  { name: "bedo", age: 22 },
-  { name: "bebo", age: 19 },
-];
+// const makeMySort = (a, b) => {
+//   const aAge = a.age;
+//   const bAge = b.age;
+//   // desc
+//   if (bAge < aAge) return bAge - aAge;
+// };
+// const names = [
+//   { name: "ali", age: 30 },
+//   { name: "soha", age: 34 },
+//   { name: "aliaa", age: 31 },
+//   { name: "soad", age: 40 },
+//   { name: "aya", age: 29 },
+//   { name: "medo", age: 21 },
+//   { name: "fedo", age: 26 },
+//   { name: "dedo", age: 24 },
+//   { name: "bedo", age: 22 },
+//   { name: "bebo", age: 19 },
+// ];
 // sort
-newNames = names
-  .sort(makeMySort)
-  .slice(0, 5)
-  .filter(({ age }) => age > 20)
-  .map(({ name: newName, age: newAge }) =>
-    newName === "ali" && newAge === 30
-      ? "ola" + ":" + 13
-      : newName + ":" + newAge
-  );
-console.log(newNames);
+// newNames = names
+//   .sort(makeMySort)
+//   .slice(0, 5)
+//   .filter(({ age }) => age > 20)
+//   .map(({ name: newName, age: newAge }) =>
+//     newName === "ali" && newAge === 30
+//       ? "ola" + ":" + 13
+//       : newName + ":" + newAge
+//   );
+// console.log(newNames);
 // slice
 // filter
 //map
+
+////////////////////////////////////
+const names = ["ali", "saed", "soha", "noha"];
+const newNames = names.filter((el) => el.includes("h"));
+console.log(newNames);
