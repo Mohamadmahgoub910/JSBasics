@@ -282,13 +282,38 @@ const userData = {
 
 // ////////////////////////////////
 // Find
-const numbers = [2, 4, , 4, 5, 76, 5];
-const newNum = numbers.find((el) => el > 2);
-console.log(newNum);
-const data = [
-  { id: 1, name: "ali" },
-  { id: 2, name: "ola" },
-];
+// const numbers = [2, 4, , 4, 5, 76, 5];
+// const newNum = numbers.find((el) => el > 2);
+// console.log(newNum);
+// const data = [
+//   { id: 1, name: "ali" },
+//   { id: 2, name: "ola" },
+// ];
 // const idFind = 1;
-const desiredData = data.find(({ id, name }) => id === 1);
-console.log(desiredData);
+// const desiredData = data.find(({ id, name }) => id === 1);
+// console.log(desiredData);
+// ////////////////////////////
+// Array Find  Ex shopping Cart
+const shoppingCart = [
+  { id: 1, Qty: 2 },
+  { id: 2, Qty: 1 },
+];
+const selectedItem = { id: 3, Qty: 5 };
+
+// check if exist ? or not
+const cartHandler = (shoppingCart, selectedItem) => {
+  const checked = shoppingCart.find((el) => el.id === selectedItem.id);
+  if (checked) {
+    // map { selectedItem into shoppingCart }
+    return shoppingCart.map((el) =>
+      el.id === selectedItem.id
+        ? // we check id ok now we have to check about Qty if there is update with new value
+          { ...el, Qty: el.Qty + selectedItem.Qty }
+        : el
+    );
+  }
+  return [...shoppingCart, { ...selectedItem }];
+};
+const cartStatus = cartHandler(shoppingCart, selectedItem);
+console.log("old", shoppingCart);
+console.log("new", cartStatus);
