@@ -294,26 +294,53 @@ const userData = {
 // console.log(desiredData);
 // ////////////////////////////
 // Array Find  Ex shopping Cart
-const shoppingCart = [
-  { id: 1, Qty: 2 },
-  { id: 2, Qty: 1 },
-];
-const selectedItem = { id: 3, Qty: 5 };
+// const shoppingCart = [
+//   { id: 1, Qty: 2 },
+//   { id: 2, Qty: 1 },
+// ];
+// const selectedItem = { id: 3, Qty: 5 };
 
 // check if exist ? or not
-const cartHandler = (shoppingCart, selectedItem) => {
-  const checked = shoppingCart.find((el) => el.id === selectedItem.id);
+// const cartHandler = (shoppingCart, selectedItem) => {
+//   const checked = shoppingCart.find((el) => el.id === selectedItem.id);
+//   if (checked) {
+//     // map { selectedItem into shoppingCart }
+//     return shoppingCart.map((el) =>
+//       el.id === selectedItem.id
+//         ? // we check id ok now we have to check about Qty if there is update with new value
+//           { ...el, Qty: el.Qty + selectedItem.Qty }
+//         : el
+//     );
+//   }
+//   return [...shoppingCart, { ...selectedItem }];
+// };
+// const cartStatus = cartHandler(shoppingCart, selectedItem);
+// console.log("old", shoppingCart);
+// console.log("new", cartStatus);
+//////////////////////////////////////////////
+const namesStud = [
+  { id: 1, fname: "ali", age: 23 },
+  { id: 2, fname: "aya", age: 21 },
+  { id: 3, fname: "ola", age: 22 },
+  { id: 4, fname: "aliaa", age: 20 },
+];
+// console.log(namesStud);
+// const newNames = namesStud.map((el) =>
+//   el.fname === "aliaa" ? { ...el, fname: "heba" } : el
+// );
+// add new name and age :-
+const addName = { id: 5, fname: "mohamad", age: 23 };
+const nameHandler = (addName, namesStud) => {
+  const checked = namesStud.find((el) => el.id === addName.id);
   if (checked) {
-    // map { selectedItem into shoppingCart }
-    return shoppingCart.map((el) =>
-      el.id === selectedItem.id
-        ? // we check id ok now we have to check about Qty if there is update with new value
-          { ...el, Qty: el.Qty + selectedItem.Qty }
+    return namesStud.map((el) =>
+      el.id === addName.id
+        ? { ...el, fname: addName.fname, age: addName.age }
         : el
     );
   }
-  return [...shoppingCart, { ...selectedItem }];
+  return [...namesStud, { ...addName }];
 };
-const cartStatus = cartHandler(shoppingCart, selectedItem);
-console.log("old", shoppingCart);
-console.log("new", cartStatus);
+const newState = nameHandler(addName, namesStud);
+console.log("old", namesStud);
+console.log("new", newState);
