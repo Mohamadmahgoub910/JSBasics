@@ -324,6 +324,12 @@ const namesStud = [
   { id: 3, fname: "ola", age: 22 },
   { id: 4, fname: "aliaa", age: 20 },
 ];
+const fullInfo = [
+  { id: 1, fname: "ali", age: 23 },
+  { id: 2, fname: "aya", age: 21 },
+  { id: 3, fname: "ola", age: 22 },
+  { id: 4, fname: "aliaa", age: 20 },
+];
 // console.log(namesStud);
 // const newNames = namesStud.map((el) =>
 //   el.fname === "aliaa" ? { ...el, fname: "heba" } : el
@@ -344,3 +350,18 @@ const nameHandler = (addName, namesStud) => {
 const newState = nameHandler(addName, namesStud);
 console.log("old", namesStud);
 console.log("new", newState);
+// //////////////////////////////////////
+const retrievedAge = (elId) => {
+  const data = newState.find((el) => el.id === elId);
+  return data.age;
+};
+fullInfo.forEach((el) => {
+  console.log({ id: el.id, fname: el.fname, age: retrievedAge(el.id) });
+});
+////////////////////////////
+// findIndex
+const arr = [2, 4, 9, 90];
+const findEl = arr.findIndex((el) => el > 4);
+console.log(findEl);
+//  Awesome tutorial
+// //////////////////////////////////
